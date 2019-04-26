@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Newly Navarro`,
+    title: `Site Title`,
     author: `David Navarro`,
     description: `A journey from Jimenez to Navarro and beyond.`,
     siteUrl: `https://gatsby-starter-blog-demo.netlify.com/`,

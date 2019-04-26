@@ -6,7 +6,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
-class SiteIndex extends React.Component {
+class BlogIndex extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle = data.site.siteMetadata.title
@@ -46,7 +46,7 @@ class SiteIndex extends React.Component {
   }
 }
 
-export default SiteIndex
+export default BlogIndex
 
 export const pageQuery = graphql`
   query {
