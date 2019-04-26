@@ -6,6 +6,15 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import { rhythm } from "../utils/typography"
 
+import {
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBBtn,
+  MDBIcon,
+  MDBInput,
+} from "mdbreact"
+
 class SiteIndex extends React.Component {
   render() {
     const { data } = this.props
@@ -19,28 +28,42 @@ class SiteIndex extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <Bio />
-        {posts.map(({ node }) => {
-          const title = node.frontmatter.title || node.fields.slug
-          return (
-            <div key={node.fields.slug}>
-              <h3
-                style={{
-                  marginBottom: rhythm(1 / 4),
-                }}
-              >
-                <Link style={{ boxShadow: `none` }} to={node.fields.slug}>
-                  {title}
-                </Link>
-              </h3>
-              <small>{node.frontmatter.date}</small>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: node.frontmatter.description || node.excerpt,
-                }}
-              />
-            </div>
-          )
-        })}
+        <MDBContainer>
+          <MDBRow>
+            <MDBCol md="6">
+              <form name="test_subscribe" data-netlify="true">
+                <p className="h5 text-center mb-4">Subscribe</p>
+                <div className="grey-text">
+                  <MDBInput
+                    label="Your name"
+                    icon="user"
+                    group
+                    type="text"
+                    validate
+                    error="wrong"
+                    success="right"
+                    name="test_subscribe_name"
+                  />
+                  <MDBInput
+                    label="Your email"
+                    icon="envelope"
+                    group
+                    type="email"
+                    validate
+                    error="wrong"
+                    success="right"
+                    name="test_subscribe_email"
+                  />
+                </div>
+                <div className="text-center">
+                  <MDBBtn type="submit" outline color="info">
+                    Send <MDBIcon far icon="paper-plane" className="ml-1" />
+                  </MDBBtn>
+                </div>
+              </form>
+            </MDBCol>
+          </MDBRow>
+        </MDBContainer>
       </Layout>
     )
   }
