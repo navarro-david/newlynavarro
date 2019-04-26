@@ -28,7 +28,36 @@ class SiteIndex extends React.Component {
           keywords={[`blog`, `gatsby`, `javascript`, `react`]}
         />
         <Bio />
-        <MDBContainer>
+        <form name="test-contact" method="POST" data-netlify="true">
+          <p>
+            <label>
+              Your Name: <input type="text" name="test-name" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your Email: <input type="email" name="test-email" />
+            </label>
+          </p>
+          <p>
+            <label>
+              Your Role:{" "}
+              <select name="test-role[]" multiple>
+                <option value="leader">Leader</option>
+                <option value="follower">Follower</option>
+              </select>
+            </label>
+          </p>
+          <p>
+            <label>
+              Message: <textarea name="message" />
+            </label>
+          </p>
+          <p>
+            <button type="submit">Send</button>
+          </p>
+        </form>
+        {/* <MDBContainer>
           <MDBRow>
             <MDBCol md="6">
               <form name="test_subscribe" data-netlify="true">
@@ -63,7 +92,7 @@ class SiteIndex extends React.Component {
               </form>
             </MDBCol>
           </MDBRow>
-        </MDBContainer>
+        </MDBContainer> */}
       </Layout>
     )
   }
