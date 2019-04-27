@@ -7,7 +7,8 @@ doelgerTheme.overrideThemeStyles = () => {
       boxShadow: `none`,
     },
     "a:link":{
-      backgroundImage: `none`
+      backgroundImage: `none`,
+      textShadow: `none`
     }
   }
 }
