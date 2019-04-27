@@ -6,9 +6,12 @@ doelgerTheme.overrideThemeStyles = () => {
     "a.gatsby-resp-image-link": {
       boxShadow: `none`,
     },
-    "a:link":{
+    "a:link,a:visited":{
       backgroundImage: `none`,
-      textShadow: `none`
+      textShadow: `none`,
+    },
+    "blockquote":{
+      borderLeft: `.5rem #7ba3d6 solid`
     }
   }
 }

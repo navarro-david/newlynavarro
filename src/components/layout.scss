@@ -5,3 +5,18 @@ html, body{
     background: -webkit-linear-gradient(to top, #d6ae7b, #eacda3);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to top, #d6ae7b, #eacda3); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
+
+a{
+    &:link{
+        color: #7ba3d6;
+    }
+    &:visited{
+        color: #7ba3d6;
+    }
+    &:hover{
+        color: #7bd1d6;
+    }
+    &:active{
+        color: #7bd1d6;
+    }
+}
