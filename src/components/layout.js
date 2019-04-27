@@ -5,8 +5,6 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import 'bootstrap-css-only/css/bootstrap.min.css';
 import 'mdbreact/dist/css/mdb.css';
 
-import { rhythm, scale } from "../utils/typography"
-
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
@@ -17,8 +15,7 @@ class Layout extends React.Component {
       header = (
         <h1
           style={{
-            ...scale(1.5),
-            marginBottom: rhythm(1.5),
+            marginBottom: `1.5rem`,
             marginTop: 0,
           }}
         >
@@ -60,8 +57,8 @@ class Layout extends React.Component {
         style={{
           marginLeft: `auto`,
           marginRight: `auto`,
-          maxWidth: rhythm(24),
-          padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+          maxWidth: `80%`,
+          padding: `1.5rem 1.75rem`,
         }}
       >
         <header>{header}</header>
