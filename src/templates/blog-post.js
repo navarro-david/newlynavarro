@@ -5,6 +5,8 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 
+import { rhythm, scale } from "../utils/typography"
+
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.markdownRemark
@@ -21,7 +23,8 @@ class BlogPostTemplate extends React.Component {
         <p
           style={{
             display: `block`,
-            marginBottom: `1rem`,
+            marginBottom: rhythm(1),
+            marginTop: rhythm(-.5),
           }}
         >
           {post.frontmatter.date}

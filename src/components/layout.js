@@ -1,9 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 
-import '@fortawesome/fontawesome-free/css/all.min.css';
-import 'bootstrap-css-only/css/bootstrap.min.css';
-import 'mdbreact/dist/css/mdb.css';
+// import Header from "./header"
+
+import "@fortawesome/fontawesome-free/css/all.min.css"
+import "bootstrap-css-only/css/bootstrap.min.css"
+import "mdbreact/dist/css/mdb.css"
+
+import { rhythm, scale } from "../utils/typography"
+import "./layout.scss"
 
 class Layout extends React.Component {
   render() {
@@ -11,58 +16,61 @@ class Layout extends React.Component {
     const rootPath = `${__PATH_PREFIX__}/`
     let header
 
-    if (location.pathname === rootPath) {
-      header = (
-        <h1
-          style={{
-            marginBottom: `1.5rem`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h1>
-      )
-    } else {
-      header = (
-        <h3
-          style={{
-            fontFamily: `Montserrat, sans-serif`,
-            marginTop: 0,
-          }}
-        >
-          <Link
-            style={{
-              boxShadow: `none`,
-              textDecoration: `none`,
-              color: `inherit`,
-            }}
-            to={`/`}
-          >
-            {title}
-          </Link>
-        </h3>
-      )
-    }
+    // if (location.pathname === rootPath) {
+    //   header = (
+    //     <h1
+    //       style={{
+    //         ...scale(1.5),
+    //         marginBottom: rhythm(1.5),
+    //         marginTop: 0,
+    //       }}
+    //     >
+    //       <Link
+    //         style={{
+    //           boxShadow: `none`,
+    //           textDecoration: `none`,
+    //           color: `inherit`,
+    //         }}
+    //         to={`/`}
+    //       >
+    //         {title}
+    //       </Link>
+    //     </h1>
+    //   )
+    // } else {
+    //   header = (
+    //     <h3
+    //       style={{
+    //         fontFamily: `Montserrat, sans-serif`,
+    //         marginTop: 0,
+    //       }}
+    //     >
+    //       <Link
+    //         style={{
+    //           boxShadow: `none`,
+    //           textDecoration: `none`,
+    //           color: `inherit`,
+    //         }}
+    //         to={`/`}
+    //       >
+    //         {title}
+    //       </Link>
+    //     </h3>
+    //   )
+    // }
     return (
       <div
-        style={{
-          marginLeft: `auto`,
-          marginRight: `auto`,
-          maxWidth: `80%`,
-          padding: `1.5rem 1.75rem`,
-        }}
+        // style={{
+        //   marginLeft: `auto`,
+        //   marginRight: `auto`,
+        //   maxWidth: rhythm(24),
+        //   padding: `${rhythm(1.5)} ${rhythm(3 / 4)}`,
+        // }}
       >
-        <header>{header}</header>
-        <main>{children}</main>
+        <Header />
+        <main>
+        {children}
+        </main>
         <footer>
           © {new Date().getFullYear()}, Built with
           {` `}
